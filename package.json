@@ -1,0 +1,29 @@
+{
+  "name": "event-db-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**"
+  },
+  "bin": {
+    "event-db-builder": "./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "cheerio": "^1.0.0-rc.2",
+    "commander": "^2.12.2",
+    "ical-toolkit": "^1.0.9",
+    "meetup": "0.1.0-SNAPSHOT",
+    "qs": "^6.5.1",
+    "request": "^2.83.0",
+    "require-directory": "^2.1.1",
+    "sqlite3": "^3.1.13",
+    "vm2": "^3.5.2"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
