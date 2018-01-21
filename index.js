@@ -8,9 +8,12 @@ const requireDirectory = require('require-directory');
 
 program
   .version(require('./package').version)
+  .option('-c, --config [path]', 'path to config')
   .option('-o, --overrides [path]', 'path to overrides json')
   .option('-d, --db [path]', 'sqlite database')
   .parse(process.argv);
+
+const config = require(path.resolve(process.cwd(), program.config));
 
 const filename = program.db ? path.resolve(process.cwd(), program.db) : ':memory:';
 
@@ -32,9 +35,10 @@ const db = new Database({
 });
 
 updateEvents({
+  config,
   db,
   overrides,
 }, (error, allEvents) => {
-  if(error) throw error;
+  if(error) console.log('error', error);
   db.db.close();
 });
