@@ -24,6 +24,11 @@
     "vm2": "^3.5.2"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.5.1",
     "mocha": "^4.0.1"
   }
 }
