@@ -21,12 +21,12 @@ let overrides = {
   organizers: {},
   venues: {},
 };
-if(program.overrides){
+if (program.overrides) {
   overrides = requireDirectory(module, path.resolve(process.cwd(), program.overrides));
-  Object.keys(overrides).forEach(function(key){
+  Object.keys(overrides).forEach((key) => {
     overrides[key] = Object.keys(overrides[key]).map(subkey => overrides[key][subkey]);
   });
-  console.log('overrides', program.overrides)
+  console.log('overrides', program.overrides);
 }
 
 const db = new Database({
@@ -39,6 +39,6 @@ updateEvents({
   db,
   overrides,
 }, (error, allEvents) => {
-  if(error) console.log('error', error);
+  if (error) console.log('error', error);
   db.db.close();
 });

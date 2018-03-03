@@ -1,6 +1,8 @@
-{
+module.exports = {
   "lat": -27.466667,
   "lon": 153.033333,
+  "timezone": "Australia/Brisbane",
+  "publicHolidaysStates": ['NAT', 'QLD'],
   "cacheTime": 2592000000,
   "meetup": {
     "key": ""
@@ -8,4 +10,4 @@
   "eventbrite": {
     "key": ""
   }
-}
+};

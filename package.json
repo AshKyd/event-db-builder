@@ -17,6 +17,7 @@
     "commander": "^2.12.2",
     "ical-toolkit": "^1.0.9",
     "meetup": "0.1.0-SNAPSHOT",
+    "moment-timezone": "^0.5.14",
     "qs": "^6.5.1",
     "request": "^2.83.0",
     "require-directory": "^2.1.1",
